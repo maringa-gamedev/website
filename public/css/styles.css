@@ -1,45 +1,97 @@
+@charset "UTF-8";
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+html {
+  height: 100%;
+  display: flex; }
+
 body {
+  flex-grow: 1;
   margin: 0;
   padding: 0;
-  background-color: #37474f;
+  display: flex;
+  flex-direction: column;
+  font-family: "Montserrat", sans-serif;
   color: white;
-  font-family: 'Montserrat', sans-serif; }
+  background-color: #37474f; }
 
 nav {
+  flex-grow: 0;
   margin: 0;
   padding: 1rem 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
   background-color: #311b92;
+  border-bottom: 2px solid #ff6434;
+  box-shadow: 0 1px 4px 2px #000063; }
+  nav span {
+    margin: -1rem 0 0 0;
+    padding: 0;
+    background-color: #311b92;
+    font-size: 2em;
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+    align-self: center;
+    animation: fadeIn 2s forwards; }
+    nav span:after {
+      content: "Maringá GameDev Association";
+      position: absolute;
+      margin: 2rem 0 0 -6rem;
+      font-size: 0.5em;
+      font-weight: normal; }
+  nav ul {
+    margin: 0;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row; }
+    nav ul li {
+      display: inline-block;
+      animation: fadeIn 2s forwards; }
+      nav ul li a {
+        margin: 1rem;
+        padding: 0.4rem;
+        display: inline-block;
+        color: #f5f5f5;
+        text-decoration: none;
+        border-bottom: 0.25rem solid transparent;
+        transition: border-bottom 0.5s; }
+        nav ul li a:hover {
+          color: #f5f5f5;
+          border-bottom: 0.25rem solid #000063; }
+
+div.root {
+  flex-grow: 1;
+  justify-self: center;
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-around; }
-
-nav span {
-  margin: 0;
-  padding: 0;
-  background-color: #311b92;
-  font-size: 2em;
-  font-weight: bold;
-  font-family: 'Poppins', sans-serif;
-  align-self: center; }
-
-nav ul {
-  margin: 0;
-  padding: 1rem;
-  display: flex;
-  flex-direction: row; }
-
-nav ul li {
-  display: inline-block; }
-
-nav ul li a {
-  margin: 1rem;
-  padding: 0.4rem;
-  display: inline-block;
-  color: #ffffff;
-  text-decoration: none;
-  border-bottom: 0.25rem solid transparent; }
-
-nav ul li a:hover {
-  color: #ffffff;
-  border-bottom: 0.25rem solid #000063; }
+  justify-content: start; }
+  div.root div.start {
+    flex-grow: 1; }
+  div.root div.end {
+    flex-grow: 1; }
+  div.root div.middle {
+    flex-grow: 2;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    box-shadow: 0 4px 2px 2px #a30000;
+    border: 1px solid #a30000;
+    border-top: none;
+    border-bottom: none;
+    background-color: #ff6434;
+    color: #f5f5f5; }
+    div.root div.middle h1.title:after {
+      content: " ";
+      width: 50%;
+      margin: 0 auto;
+      border-bottom: 1px solid #a30000;
+      opacity: 0.5; }
+    div.root div.middle h2.subtitle {
+      margin-top: -1rem; }
