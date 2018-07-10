@@ -5,9 +5,7 @@
   "main": "index.js",
   "repository": "https://github.com/theosirian/mgda-website.git",
   "author": "Tiago Nascimento <xtheosirian@gmail.com>",
-  "contributors": [
-    "Guilherme Chichanoski <guilhermechichanoski@gmail.com>"
-  ],
+  "contributors": ["Guilherme Chichanoski <guilhermechichanoski@gmail.com>"],
   "license": "MIT",
   "private": false,
   "dependencies": {
@@ -21,9 +19,10 @@
     "build:html": "pug ./src/pages -o ./public",
     "build:css": "node-sass-chokidar ./src/css -o ./public/css",
     "build": "run-s build:*",
-    "live:html": "pug ./src/pages -o ./public --watch",
+    "live:html": "pug --watch ./src/pages -o ./public",
     "live:css": "node-sass-chokidar ./src/css -o ./public/css --watch",
-    "live:serve": "live-server --host=0.0.0.0 --port=1337 --browser=qutebrowser --watch=public public",
+    "live:serve":
+      "live-server --host=0.0.0.0 --port=1337 --browser=qutebrowser --watch=public public",
     "live": "run-p live:*",
     "start": "yarn run live"
   }

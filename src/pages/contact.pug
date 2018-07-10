@@ -1,0 +1,38 @@
+doctype html
+html
+  include ../includes/head.pug
+  body
+    include ../includes/menu.pug
+    div.root
+      div.start
+      div.middle
+        h1.title='Contato'
+        p.subtitle
+          span='Faça parte você também!'
+        div.content
+          div.media.facebook
+            a(href='#')
+              img.icon(src='/img/facebook.svg')
+            p='Melhor maneira de saber o que está acontecendo e interagir.'
+          div.divider
+          div.media.twitter
+            p='Acompanhe em tempo-real informações de evento promovidos pelo grupo.'
+            a(href='#')
+              img.icon(src='/img/twitter.svg')
+          div.divider
+          div.media.discord
+            a(href='#')
+              img.icon(src='/img/discord.svg')
+            p='Seja para jogar ou desenvolver, o pessoal está sempre no Discord.'
+          div.divider
+          form.contact
+            p='Quer mandar uma mensagem diretamente para os responśaveis?'
+            p='Preencha o formulário abaixo.'
+            label.name='Nome:'
+              input(name='name' placeholder='Seu nome...')
+            label.email='Email:'
+              input(name='email' placeholder='Seu endereço de email...')
+            label.message='Mensagem:'
+              textarea(name='message' placeholder='Sua mensagem...')
+            button(type=submit)='Enviar'
+      div.end
