@@ -26,13 +26,13 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  background-color: #220f43;
+  background-color: #220F43;
   border-bottom: 2px solid #ee9c2c;
   box-shadow: 0 -1rem 4rem 4px #ee9c2c; }
   nav span {
     margin: -1rem 0 0 0;
     padding: 0;
-    background-color: #220f43;
+    background-color: #220F43;
     font-size: 2em;
     font-weight: bold;
     font-family: "Poppins", sans-serif;
@@ -56,7 +56,7 @@ nav {
         margin: 1rem;
         padding: 0.4rem;
         display: inline-block;
-        color: #bcb7c6;
+        color: #bdb7c7;
         text-decoration: none;
         border-bottom: 0.25rem solid transparent;
         transition: border-bottom 0.5s; }
@@ -110,36 +110,3 @@ div.root {
     div.root div.middle p {
       text-align: justify;
       text-justify: inter-word; }
-
-div.content div.project {
-  margin: 1rem;
-  padding: 1rem 2rem;
-  min-width: 64px;
-  display: flex;
-  flex-direction: column; }
-  div.content div.project svg.image {
-    flex-grow: 1;
-    min-width: 64px;
-    min-height: 64px; }
-  div.content div.project div.text {
-    padding: 1rem;
-    flex-grow: 4; }
-    div.content div.project div.text h1.title {
-      text-align: left; }
-    div.content div.project div.text p.description {
-      text-align: justify;
-      text-justify: inter-word;
-      overflow: hidden; }
-    div.content div.project div.text ul.team {
-      display: flex;
-      flex-direction: column;
-      list-style: none;
-      justify-content: space-around; }
-      div.content div.project div.text ul.team li {
-        padding: 0.5rem;
-        margin: 0.5rem;
-        border: 1px solid #ee9c2c;
-        background-color: #e98d06;
-        border-radius: 4px;
-        font-size: 0.75em;
-        color: #472a02; }
