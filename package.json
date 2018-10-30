@@ -16,13 +16,13 @@
     "yarn-run-all": "^3.1.1"
   },
   "scripts": {
-    "build:html": "pug ./src/pages -o ./public",
-    "build:css": "node-sass-chokidar ./src/css -o ./public/css",
+    "build:html": "pug ./src/pages -o ./docs",
+    "build:css": "node-sass-chokidar ./src/css -o ./docs/css",
     "build": "run-s build:*",
-    "live:html": "pug --watch ./src/pages -o ./public",
-    "live:css": "node-sass-chokidar ./src/css -o ./public/css --watch",
+    "live:html": "pug --watch ./src/pages -o ./docs",
+    "live:css": "node-sass-chokidar ./src/css -o ./docs/css --watch",
     "live:serve":
-      "live-server --host=0.0.0.0 --port=1337 --browser=qutebrowser --watch=public public",
+      "live-server --host=0.0.0.0 --port=1337 --browser=qutebrowser --watch=docs docs",
     "live": "run-p live:*",
     "start": "yarn run live"
   }
